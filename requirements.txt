@@ -1,0 +1,5 @@
+Django>=4.2
+psycopg2>=2.9,<3.0  # If you're using PostgreSQL as the database
+pytest>=6.0,<7.0
+pytest-django>=4.0,<5.0
+coverage>=6.0,<7.0
