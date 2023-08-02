@@ -3,7 +3,7 @@ from .models import Producto, Empleado, Cliente
 
 class MyappTests(TestCase):
     def test_create_producto(self):
-        producto = Producto.objects.create(name="Product 1", description="Producto 1 descripcion")
+        producto = Producto.objects.create(name="Product 1", description="Producto 1 descripcion!!!")
         self.assertEqual(Producto.objects.count(), 1)
 
     def test_create_empleado(self):
