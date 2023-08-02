@@ -1,17 +1,18 @@
-name: Continuous Deployment
+# .github/workflows/cd.yml
+
+name: CD
 
 on:
   push:
     branches:
-      - desarrollo
+      - desarrollo 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -19,10 +20,17 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Deploy to staging
         run: |
-          python manage.py migrate
+          pip install -r requirements.txt
+
+      - name: Collect static files
+        run: |
           python manage.py collectstatic --noinput
-          python manage.py runserver
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git checkout gh-pages
+          git rm -r --cached .
+          git add static
+          git commit -m "gh-pages"
+          git push origin gh-pages

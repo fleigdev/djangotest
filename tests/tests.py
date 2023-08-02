@@ -7,7 +7,7 @@ class MyappTests(TestCase):
             name="Product 1",
             description="Producto 1 descripcion!!!",
             price=19.99,
-            category="Electronics",
+            category="Electronicos",
             stock=100,
             is_available=True
         )
@@ -21,7 +21,7 @@ class MyappTests(TestCase):
             hire_date="2023-07-18",
             salary=50000.00,
             is_active=True,
-            address="123 Main St",
+            address="123 Av Beni",
             phone_number="555-123-4567"
         )
         self.assertEqual(Empleado.objects.count(), 1)
@@ -31,8 +31,8 @@ class MyappTests(TestCase):
             name="Sergio Suarez",
             email="sergio@suarez.com",
             phone_number="555-987-6543",
-            address="456 Oak St",
-            company="ABC Company",
+            address="456 Oaker Ave",
+            company="ABC Compania",
             is_active=True
         )
         self.assertEqual(Cliente.objects.count(), 1)
