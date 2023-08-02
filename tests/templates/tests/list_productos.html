@@ -1,0 +1,5 @@
+<!-- tests/list_productos.html -->
+{% extends "base.html" %}
+{% block content %}
+  {% include "partials/list_objects.html" with objects=objects model_name=model_name %}
+{% endblock %}
