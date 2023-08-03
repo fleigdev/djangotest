@@ -27,10 +27,6 @@ jobs:
         run: |
           python manage.py collectstatic --noinput
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to Remote Server
         run: |
-          git checkout gh-pages
-          git rm -r --cached .
-          git add static
-          git commit -m "gh-pages"
-          git push origin gh-pages
+          ssh user@ip-ejemplo 'cd /path/proyecto/test && git pull origin desarrollo && source /path/to/your/venv/bin/activate && pip install -r requirements.txt && python manage.py migrate && sudo systemctl restart'

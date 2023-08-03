@@ -5,7 +5,7 @@ class MyappTests(TestCase):
     def test_create_producto(self):
         producto = Producto.objects.create(
             name="Product 1",
-            description="Producto 1 descripcion!!!",
+            description="Producto 1 descripcion",
             price=19.99,
             category="Electronicos",
             stock=100,

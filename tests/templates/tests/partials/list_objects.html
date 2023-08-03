@@ -4,35 +4,35 @@
 
 {% block content %}
   <div class="container mt-4">
-    <h1>{{ model_name }} List</h1>
+    <h1>{{ model_name }} Lista</h1>
     <table class="table table-striped">
       <thead>
         <tr>
           <th>Name</th>
           {% if model_name == "Producto" %}
-          <th>Description</th>
-          <th>Price</th>
-          <th>Category</th>
+          <th>Descripcion</th>
+          <th>Precio</th>
+          <th>Categoria</th>
           <th>Stock</th>
           <th>Created At</th>
           <th>Updated At</th>
-          <th>Is Available</th>
+          <th>Disponible</th>
           {% elif model_name == "Empleado" %}
-          <th>Position</th>
-          <th>Department</th>
-          <th>Hire Date</th>
-          <th>Salary</th>
-          <th>Is Active</th>
-          <th>Address</th>
-          <th>Phone Number</th>
+          <th>Posicion</th>
+          <th>Departmento</th>
+          <th>Contratado en</th>
+          <th>Salario</th>
+          <th>Disponible</th>
+          <th>Direccion</th>
+          <th>Telefono</th>
           {% elif model_name == "Cliente" %}
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>Address</th>
-          <th>Company</th>
+          <th>Correo</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Compania</th>
           <th>Created At</th>
           <th>Updated At</th>
-          <th>Is Active</th>
+          <th>Disponible</th>
           {% endif %}
         </tr>
       </thead>
