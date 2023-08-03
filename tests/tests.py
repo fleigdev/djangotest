@@ -11,7 +11,7 @@ class MyappTests(TestCase):
             stock=100,
             is_available=True
         )
-        self.assertEqual(Producto.objects.count(), 1)
+        self.assertEqual(Producto.objects.count(), 0)
 
     def test_create_empleado(self):
         empleado = Empleado.objects.create(
